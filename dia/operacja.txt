@@ -1,0 +1,22 @@
+W encji OPERACJA bierze udział jeden Pacjent, jeden Chirurg, i jedna lub więcej
+pielęgniarek.
+
+Pacjent może mieć przeprowadzonych wiele operacji. Ma atrybuty:
+    -PESEL - KEY
+    -nazwisko
+    -imię
+    -data urodzenia
+Chirurg może przeprowadzać wiele operacji. Atrybuty:
+    -ID - KEY
+    -nazwisko
+    -imię
+Pielęgniarka może brać udział w wielu operacjach. Atrybuty:
+    -ID - KEY
+    -nazwisko
+    -imię
+
+Pracownicy zajmują w szpitalu po jednym stanowisku, ale w szpitalu
+może być wiele osób na jednym stanowisku. Każde stanowisko ma atrybuty:
+    -pensja
+    -ID - KEY
+    -nazwa
