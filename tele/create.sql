@@ -12,7 +12,6 @@ CREATE TABLE klient
 CREATE TABLE oferta
 (
     nr                char(4)        NOT NULL,
-    czas_trwania      char(2)        NOT NULL,
     cena              varchar(16)    NOT NULL,
     typ               varchar(16)            ,
     pakiet_internet_MB varchar(16)           ,
@@ -22,9 +21,11 @@ CREATE TABLE oferta
 );
 CREATE TABLE umowa
 (
+    ID                serial                  ,
+    typ               varchar(16)             ,
     data_zawarcia     date                    ,
     data_zakonczenia  date                    ,
-    ID                serial                  ,
+
     klient_PESEL      char(11)                ,
     oferta_nr         char(4)                 ,
     CONSTRAINT        umowa_ID_pk    PRIMARY KEY(ID),
@@ -37,7 +38,7 @@ CREATE TABLE umowa
 
 CREATE TABLE stanowisko
 (
-    ID              serial          NOT NULL,
+    ID              char(2)          NOT NULL,
     nazwa           varchar(32)     NOT NULL,
     pensja          char(32)                ,
     CONSTRAINT      stanowisko_ID_pk    PRIMARY KEY(ID)
@@ -45,7 +46,7 @@ CREATE TABLE stanowisko
 
 CREATE TABLE oddzial
 (
-    numer           serial          NOT NULL,
+    numer           char(4)          NOT NULL,
     nazwa           varchar(32)             ,
     telefon         varchar(16)             ,
     kod_pocztowy    char(6)         NOT NULL,
@@ -62,11 +63,11 @@ CREATE TABLE pracownik
     kod_pocztowy    char(6)         NOT NULL,
     miasto          varchar(32)             ,
     ulica_dom       varchar(32)     NOT NULL,
-    stanowisko_ID   int                     ,
-    oddzial_numer   int                     ,
+    stanowisko_ID   char(2)                    ,
+    oddzial_numer   char(4)                     ,
     CONSTRAINT      pracownik_PESEL PRIMARY KEY(PESEL),
     CONSTRAINT      stanowisko_fk FOREIGN KEY(stanowisko_ID)
-                        REFERENCES stanowisko(ID),
+                REFERENCES stanowisko(ID),
     CONSTRAINT      oddzial_fk      FOREIGN KEY(oddzial_numer)
-                        REFERENCES oddzial(numer)
+                REFERENCES oddzial(numer)
 );
