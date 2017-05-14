@@ -25,15 +25,15 @@ INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
 
 
 
--- INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
---     VALUES
---         ('19-12-2013', "19-12-2015", '95122559559', '02');
--- INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
---     VALUES
---     ('09-01-2016', "09-01-2018", '92012125658', '03');
--- INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
---     VALUES
---     ('30-05-2015', "30-05-2017", '70051156774', '01');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+    VALUES
+        ('19-12-2013', '19-12-2015', '95122559559', '02');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+    VALUES
+    ('09-01-2016', '09-01-2018', '92012125658', '03');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+    VALUES
+    ('30-05-2015', '30-05-2017', '70051156774', '01');
 
 
 INSERT INTO stanowisko(ID, nazwa, pensja)
