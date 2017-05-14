@@ -1,6 +1,8 @@
 SET DATESTYLE TO 'European,German';
 SET client_encoding='utf-8';
 
+-------------------KLIENT----------------------------------------------------
+
 insert into klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
     ('92012125658', 'Marcin', 'Nowak', '83-000', 'Gdańsk', 'Główna 22');
@@ -11,7 +13,7 @@ INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
     ('70051156774', 'Zygmunt', 'Stary', '83-200', 'Starogard Gdański', 'Brudna 2');
 
-
+-------------------OFERTA----------------------------------------------------
 
 INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
@@ -23,7 +25,7 @@ INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
     ('03', '69 zł', 'abonament', '7168', 'nonlimit', 'nonlimit');
 
-
+-------------------UMOWA----------------------------------------------------
 
 INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
     VALUES
@@ -35,6 +37,7 @@ INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
     VALUES
     ('30-05-2015', '30-05-2017', '70051156774', '01');
 
+-------------------STANOWISKO----------------------------------------------------
 
 INSERT INTO stanowisko(ID, nazwa, pensja)
     VALUES
@@ -46,7 +49,7 @@ INSERT INTO stanowisko(ID, nazwa, pensja)
     VALUES
     ('102', 'sprzedawca', '1400zł');
 
-
+-------------------ODDZIAL----------------------------------------------------
 
 INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
     VALUES
@@ -58,7 +61,7 @@ INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
     VALUES
     ('5557', 'Sklep Warszawa', '147258369', '23-999', 'Warszawa', 'Dziwna 152');
 
-
+-------------------PRACOWNIK----------------------------------------------------
 
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
