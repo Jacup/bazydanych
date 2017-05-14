@@ -1,2 +1,2 @@
-zamienic tele z egzemplarzem,
-dwa zwiazki miedzy umowa-klient-pracownik
+zamienic tele z egzemplarzem,               --- done
+dwa zwiazki miedzy umowa-klient-pracownik   --- done
