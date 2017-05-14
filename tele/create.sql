@@ -22,20 +22,6 @@ CREATE TABLE oferta
     pakiet_sms          varchar(16)             ,
     CONSTRAINT          oferta_nr_pk    PRIMARY KEY(nr)
 );
-CREATE TABLE umowa
-(
-    ID                  serial                  ,
-    data_zawarcia       date                    ,
-    data_zakonczenia    date                    ,
-    klient_pesel        char(11)                ,
-    oferta_nr           char(4)                 ,
-    CONSTRAINT          umowa_ID_pk     PRIMARY KEY(ID),
-    CONSTRAINT          klient_fk       FOREIGN KEY(klient_pesel)
-                    REFERENCES klient(pesel),
-    CONSTRAINT          oferta_fk       FOREIGN KEY(oferta_nr)
-                    REFERENCES oferta(nr),
-    CONSTRAINT          dates CHECK(data_zawarcia<=data_zakonczenia)
-);
 
 CREATE TABLE stanowisko
 (
@@ -58,7 +44,7 @@ CREATE TABLE oddzial
 
 CREATE TABLE pracownik
 (
-    PESEL               char(11)        NOT NULL,
+    pesel               char(11)        NOT NULL,
     imie                varchar(32)     NOT NULL,
     nazwisko            varchar(32)     NOT NULL,
     kod_pocztowy        char(6)         NOT NULL,
@@ -71,4 +57,36 @@ CREATE TABLE pracownik
                     REFERENCES stanowisko(ID),
     CONSTRAINT          oddzial_fk      FOREIGN KEY(oddzial_numer)
                     REFERENCES oddzial(numer)
+);
+CREATE TABLE telefon
+(
+    producent           varchar(32)     NOT NULL,
+    model               varchar(32)     NOT NULL,
+    ekran               numeric(1,2)            ,
+    CPU                 varchar(32)             ,
+    RAM_GB              char(3)                 ,
+    pamiec_GB           char(3)                 ,
+);
+            -------------DOKONCZYC TELE I egzemplarz!!
+CREATE TABLE egzemplarz
+(
+    IMEI                numeric(15)
+);
+
+CREATE TABLE umowa
+(
+    ID                  serial                  ,
+    data_zawarcia       date            NOT NULL,
+    data_zakonczenia    date            NOT NULL,
+    klient_pesel        char(11)                ,
+    oferta_nr           char(4)                 ,
+    pracownik_pesel     char(11)                ,
+    CONSTRAINT          umowa_ID_pk     PRIMARY KEY(ID),
+    CONSTRAINT          klient_fk       FOREIGN KEY(klient_pesel)
+                    REFERENCES klient(pesel),
+    CONSTRAINT          oferta_fk       FOREIGN KEY(oferta_nr)
+                    REFERENCES oferta(nr),
+    CONSTRAINT          pracownik_fk    FOREIGN KEY(pracownik_pesel)
+                    REFERENCES pracownik(pesel),
+    CONSTRAINT          dates CHECK(data_zawarcia<=data_zakonczenia)
 );

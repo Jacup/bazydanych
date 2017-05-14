@@ -12,6 +12,15 @@ INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
 INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
     ('70051156774', 'Zygmunt', 'Stary', '83-200', 'Starogard Gdański', 'Brudna 2');
+INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
+    VALUES
+    ('92012125658', 'Kuba', 'Smith', '83-000', 'Gdańsk', 'Morska 7C/13');
+INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
+    VALUES
+    ('92012125658', 'Aleksander', 'Świeży', '80-225', NULL, 'Kowale 3');
+INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
+    VALUES
+    ('92012125658', 'Władysław', 'Kowalczyk', '55-150', 'Kraków', 'Główna 22');
 
 -------------------OFERTA----------------------------------------------------
 
@@ -23,7 +32,13 @@ INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     ('02', '49 zł', 'abonament', '2048', 'nonlimit', '2500');
 INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('03', '69 zł', 'abonament', '7168', 'nonlimit', 'nonlimit');
+    ('03', '15 zł', 'mix', '150', '200', '500');
+INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+    VALUES
+    ('04', '15 zł', 'abonament', '512', null, '200');
+INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+    VALUES
+    ('05', '129 zł', 'abonament', 'nonlimit', 'nonlimit', 'nonlimit');
 
 -------------------UMOWA----------------------------------------------------
 
