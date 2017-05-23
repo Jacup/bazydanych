@@ -1,8 +1,7 @@
 SET client_encoding='utf-8';
 SET DATESTYLE TO 'European,German';
 
-CREATE TABLE klient
-(
+CREATE TABLE klient(
     pesel               char(11)        NOT NULL,
     imie                varchar(32)     NOT NULL,
     nazwisko            varchar(32)     NOT NULL,
@@ -12,8 +11,27 @@ CREATE TABLE klient
     CONSTRAINT          klient_PESEL_pk PRIMARY KEY(PESEL)
 );
 
-CREATE TABLE oferta
-(
+CREATE TABLE telefon(
+    kod                 varchar(16)     NOT NULL,
+    producent           varchar(32)     NOT NULL,
+    model               varchar(32)     NOT NULL,
+    ekran               numeric(2,2)            ,
+    CPU                 varchar(32)             ,
+    RAM_GB              char(3)                 ,
+    pamiec_GB           char(3)                 ,
+    CONSTRAINT          telefon_pk      PRIMARY KEY(kod)
+
+);
+
+CREATE TABLE egzemplarz(
+    IMEI                numeric(15)             ,
+    telefon_kod         varchar(16)     NOT NULL,
+    CONSTRAINT          egzemplarz_pk   PRIMARY KEY(IMEI),
+    CONSTRAINT          telefon_fk      FOREIGN KEY(telefon_kod)
+                    REFERENCES telefon(kod)
+);
+
+CREATE TABLE oferta(
     nr                  char(2)         NOT NULL,
     cena                varchar(16)     NOT NULL,
     typ                 varchar(16)     NOT NULL,
@@ -23,18 +41,16 @@ CREATE TABLE oferta
     CONSTRAINT          oferta_nr_pk    PRIMARY KEY(nr)
 );
 
-CREATE TABLE stanowisko
-(
+CREATE TABLE stanowisko(
     ID                  char(3)         NOT NULL,
     nazwa               varchar(32)     NOT NULL,
     pensja              char(32)                ,
     CONSTRAINT          stanowisko_ID_pk    PRIMARY KEY(ID)
 );
 
-CREATE TABLE oddzial
-(
+CREATE TABLE oddzial(
     numer               char(4)         NOT NULL,
-    nazwa               varchar(32)             ,
+    nazwa               varchar(32)     NOT NULL,
     telefon             varchar(16)             ,
     kod_pocztowy        char(6)         NOT NULL,
     miasto              varchar(32)             ,
@@ -42,8 +58,7 @@ CREATE TABLE oddzial
     CONSTRAINT          oddzial_numer_pk    PRIMARY KEY(numer)
 );
 
-CREATE TABLE pracownik
-(
+CREATE TABLE pracownik(
     pesel               char(11)        NOT NULL,
     imie                varchar(32)     NOT NULL,
     nazwisko            varchar(32)     NOT NULL,
@@ -58,42 +73,23 @@ CREATE TABLE pracownik
     CONSTRAINT          oddzial_fk      FOREIGN KEY(oddzial_numer)
                     REFERENCES oddzial(numer)
 );
-CREATE TABLE telefon
-(
-    kod                 varchar(16)             ,
-    producent           varchar(32)     NOT NULL,
-    model               varchar(32)     NOT NULL,
-    ekran               numeric(2,2)            ,
-    CPU                 varchar(32)             ,
-    RAM_GB              char(3)                 ,
-    pamiec_GB           char(3)                 ,
-    CONSTRAINT          telefon_pk      PRIMARY KEY(kod)
 
-);
-            -------------DOKONCZYC TELE I egzemplarz!!
-CREATE TABLE egzemplarz
-(
-    IMEI                numeric(15)             ,
-    telefon_kod         varchar(16)     NOT NULL,
-    CONSTRAINT          egzemplarz_pk   PRIMARY KEY(IMEI),
-    CONSTRAINT          telefon_fk      FOREIGN KEY(telefon_kod)
-                    REFERENCES telefon(kod)
-);
-
-CREATE TABLE umowa
-(
+CREATE TABLE umowa(
     ID                  serial                  ,
     data_zawarcia       date            NOT NULL,
     data_zakonczenia    date            NOT NULL,
-    klient_pesel        char(11)                ,
     oferta_nr           char(4)                 ,
+    klient_pesel        char(11)                ,
     pracownik_pesel     char(11)                ,
+    egzemplarz_IMEI     numeric(15)             ,
     CONSTRAINT          umowa_ID_pk     PRIMARY KEY(ID),
-    CONSTRAINT          klient_fk       FOREIGN KEY(klient_pesel)
-                    REFERENCES klient(pesel),
     CONSTRAINT          oferta_fk       FOREIGN KEY(oferta_nr)
                     REFERENCES oferta(nr),
+    CONSTRAINT          klient_fk       FOREIGN KEY(klient_pesel)
+                    REFERENCES klient(pesel),
     CONSTRAINT          pracownik_fk    FOREIGN KEY(pracownik_pesel)
                     REFERENCES pracownik(pesel),
+    CONSTRAINT          egzemplarz_fk   FOREIGN KEY(egzemplarz_IMEI)
+                    REFERENCES egzemplarz(IMEI),
     CONSTRAINT          dates CHECK(data_zawarcia<=data_zakonczenia)
 );
