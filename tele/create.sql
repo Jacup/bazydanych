@@ -60,17 +60,24 @@ CREATE TABLE pracownik
 );
 CREATE TABLE telefon
 (
+    kod                 varchar(16)             ,
     producent           varchar(32)     NOT NULL,
     model               varchar(32)     NOT NULL,
-    ekran               numeric(1,2)            ,
+    ekran               numeric(2,2)            ,
     CPU                 varchar(32)             ,
     RAM_GB              char(3)                 ,
     pamiec_GB           char(3)                 ,
+    CONSTRAINT          telefon_pk      PRIMARY KEY(kod)
+
 );
             -------------DOKONCZYC TELE I egzemplarz!!
 CREATE TABLE egzemplarz
 (
-    IMEI                numeric(15)
+    IMEI                numeric(15)             ,
+    telefon_kod         varchar(16)     NOT NULL,
+    CONSTRAINT          egzemplarz_pk   PRIMARY KEY(IMEI),
+    CONSTRAINT          telefon_fk      FOREIGN KEY(telefon_kod)
+                    REFERENCES telefon(kod)
 );
 
 CREATE TABLE umowa
