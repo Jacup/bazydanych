@@ -5,22 +5,81 @@ SET client_encoding='utf-8';
 
 insert into klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
-    ('92012125658', 'Marcin', 'Nowak', '83-000', 'Gdańsk', 'Główna 22');
+    ('00000000000', 'Marcin', 'Nowak', '83-000', 'Gdańsk', 'Główna 22');
 INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
-    ('95122559559', 'Andrzej', 'Maślak', '83-201', NULL, 'Nowa Wieś 10/3');
+    ('01111111111', 'Andrzej', 'Maślak', '83-201', NULL, 'Nowa Wieś 10/3');
 INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
-    ('70051156774', 'Zygmunt', 'Stary', '83-200', 'Starogard Gdański', 'Brudna 2');
+    ('02222222222', 'Zygmunt', 'Stary', '83-200', 'Starogard Gdański', 'Brudna 2');
 INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
-    ('92012125658', 'Kuba', 'Smith', '83-000', 'Gdańsk', 'Morska 7C/13');
+    ('03333333333', 'Kuba', 'Smith', '83-000', 'Gdańsk', 'Morska 7C/13');
 INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
-    ('92012125658', 'Aleksander', 'Świeży', '80-225', NULL, 'Kowale 3');
+    ('04444444444', 'Aleksander', 'Świeży', '80-225', NULL, 'Kowale 3');
 INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
     VALUES
-    ('92012125658', 'Władysław', 'Kowalczyk', '55-150', 'Kraków', 'Główna 22');
+    ('05555555555', 'Władysław', 'Kowalczyk', '55-150', 'Kraków', 'Główna 22');
+INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
+    VALUES
+    ('06666666666', 'Marek', 'Nowak', '55-150', 'Kraków', 'Poziomkowa 14');
+INSERT INTO klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)
+    VALUES
+    ('07777777777', 'Zygmunt', 'Stary', '55-155', 'Kraków', 'Malinowa 3');
+-------------------TELEFON---------------------------------------------------
+
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0001', 'Sony', 'XPERIA XZ', '5,2', 'Snapdragon 820', '3', '32');
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0002', 'Samsung', 'Galaxy S8', '5,8', 'Exynos 8895', '4', '64');
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0003', 'Samsung', 'Galaxy S7 Edge', '5,5', 'Exynos 8890', '4', '32');
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0004', 'LG', 'G6', '5,7', 'Snapdragon 821', '4', '32');
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0005', 'Xiaomi', 'Mi5 Pro', '5,15', 'Snapdragon 820', '4', '128');
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0006', 'Xiaomi', 'Mi6', '5,15', 'Snapdragon 835', '6', '128');
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0007', 'Huawei', 'P10 Plus', '5,5', 'Kirin 960', '6', '128');
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0008', 'Huawei', 'P9', NULL, NULL, NULL, NULL);
+INSERT INTO telefon (kod, producent, model, ekran, CPU, RAM_GB, pamiec_GB)
+    VALUES
+    ('0009', 'Huawei', 'P9 Lite', '5,5', NULL, '2', NULL);
+
+-------------------EGZLEMPLARZ-----------------------------------------------
+
+INSERT INTO egzemplarz(IMEI, telefon_kod)
+    VALUES
+    ('999999999999999', '0008');
+INSERT INTO egzemplarz(IMEI, telefon_kod)
+    VALUES
+    ('999999999999998', '0005');
+INSERT INTO egzemplarz(IMEI, telefon_kod)
+    VALUES
+    ('999999999999997', '0004');
+INSERT INTO egzemplarz(IMEI, telefon_kod)
+    VALUES
+    ('999999999999996', '0006');
+INSERT INTO egzemplarz(IMEI, telefon_kod)
+    VALUES
+    ('999999999999995', '0002');
+INSERT INTO egzemplarz(IMEI, telefon_kod)
+    VALUES
+    ('999999999999994', '0002');
+INSERT INTO egzemplarz(IMEI, telefon_kod)
+    VALUES
+    ('999999999999993', '0001');
 
 -------------------OFERTA----------------------------------------------------
 
@@ -29,7 +88,7 @@ INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     ('01', '29 zł', 'mix', NULL, '1000', '500');
 INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('02', '49 zł', 'abonament', '2048', 'nonlimit', '2500');
+    ('02', '49 zł', 'abonament', '2048', 'NO-LIMIT', '2500');
 INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
     ('03', '15 zł', 'mix', '150', '200', '500');
@@ -38,21 +97,12 @@ INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     ('04', '15 zł', 'abonament', '512', null, '200');
 INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('05', '129 zł', 'abonament', 'nonlimit', 'nonlimit', 'nonlimit');
-
--------------------UMOWA----------------------------------------------------
-
-INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+    ('05', '129 zł', 'abonament', 'NO-LIMIT', 'NO-LIMIT', 'NO-LIMIT');
+INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-        ('19-12-2013', '19-12-2015', '95122559559', '02');
-INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-    VALUES
-    ('09-01-2016', '09-01-2018', '92012125658', '03');
-INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-    VALUES
-    ('30-05-2015', '30-05-2017', '70051156774', '01');
+    ('06', '69 zł', 'abonament', 'NO-LIMIT', '250', '500');
 
--------------------STANOWISKO----------------------------------------------------
+    -------------------STANOWISKO----------------------------------------------------
 
 INSERT INTO stanowisko(ID, nazwa, pensja)
     VALUES
@@ -63,7 +113,12 @@ INSERT INTO stanowisko(ID, nazwa, pensja)
 INSERT INTO stanowisko(ID, nazwa, pensja)
     VALUES
     ('102', 'sprzedawca', '1400zł');
-
+INSERT INTO stanowisko(ID, nazwa, pensja)
+    VALUES
+    ('103', 'Informatyk', '5020zł');
+INSERT INTO stanowisko(ID, nazwa, pensja)
+    VALUES
+    ('104', 'Dyrektor', '8400zł');
 -------------------ODDZIAL----------------------------------------------------
 
 INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
@@ -71,7 +126,7 @@ INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
     ('5555', 'Sklep Gdańsk', NULL, '83-000', 'Gdańsk', 'Morska 12B');
 INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
     VALUES
-    ('5556', NULL, '123456789', '00-125', NULL, 'Wioska 3');
+    ('5556', 'Wioskowo', '123456789', '00-125', NULL, 'Wioska 3');
 INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
     VALUES
     ('5557', 'Sklep Warszawa', '147258369', '23-999', 'Warszawa', 'Dziwna 152');
@@ -80,10 +135,67 @@ INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
 
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
-    ('95856566925', 'Andrzej', 'Piwerko', '83-200', 'Starogard Gdański', 'Rynek 1', '102', '5555');
+    ('11111111111', 'Andrzej', 'Piwerko', '83-000', 'Gdynia', 'Rynek 1', '100', '5555');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
-    ('78950522111', 'Marian', 'Wódeczka', '23-990', 'Warszawa', 'Rynek 1', '100', '5557');
+    ('12222222222', 'Marian', 'Wódeczka', '23-990', 'Warszawa', 'Rynek 12A', '100', '5557');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
-    ('96959488222', 'Grzegorz', 'Bimberek', '00-124', 'Śląsk', 'Krótka 22', '101', '5556');
+    ('13333333333', 'Grzegorz', 'Bimberek', '00-124', 'Śląsk', 'Krótka 22', '100', '5556');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('14444444444', 'Natalia', 'Ogórek', '83-201', NULL, 'Rokocin 1', '102', '5555');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('15555555555', 'Zenek', 'Martyniuk', '23-990', 'Warszawa', 'Marszałkowska 13', '101', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('16666666666', 'Aleksandra', 'Szczupak', '83-000', 'Gdańsk', 'Kościuszki 13', '100', '5555');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('17777777777', 'Monika', 'Brodka', '00-120', 'Dąbrowa Górnicza', 'Morska 3', '101', '5556');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('18888888888', 'Paweł', 'Zduński', '23-991', 'Warszawa', 'Gajowa 22A/35', '104', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('11333333333', 'Kamil', 'Bednarek', '23-991', 'Warszawa', 'Powstańców 32/1', '103', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('11444444444', 'Zbigniew', 'Malanowski', '23-991', 'Warszawa', 'Wolna 1/12', '102', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('11555555555', 'Krzysztof', 'Rutkowski', '23-991', 'Warszawa', 'Majowa 13A', '102', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('19999999999', 'Marek', 'Mostowiak', '00-124', NULL, 'Dąbrówka 5', '102', '5556');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('11222222222', 'Hania', 'Mostowiak', '00-124', NULL, 'Dąbrówka 3', '102', '5556');
+
+-------------------UMOWA----------------------------------------------------
+
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('19-12-2013', '19-12-2015', '04444444444', '02');
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('09-01-2016', '09-01-2018', '02222222222', '03');
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('26-03-2015', '26-03-2016', '05555555555', '06');
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('05-05-2017', '05-05-2019', '07777777777', '05');
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('04-05-2015', '04-05-2017', '01111111111', '01');
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('22-06-2015', '22-06-2018', '03333333333', '03');
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('01-03-2016', '01-03-2018', '06666666666', '02');
+    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
+        VALUES
+        ('15-12-2016', '15-12-2018', '02222222222', '05');

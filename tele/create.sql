@@ -12,10 +12,10 @@ CREATE TABLE klient(
 );
 
 CREATE TABLE telefon(
-    kod                 varchar(16)     NOT NULL,
+    kod                 varchar(4)      NOT NULL,
     producent           varchar(32)     NOT NULL,
     model               varchar(32)     NOT NULL,
-    ekran               numeric(2,2)            ,
+    ekran               varchar(4)              ,
     CPU                 varchar(32)             ,
     RAM_GB              char(3)                 ,
     pamiec_GB           char(3)                 ,
@@ -78,9 +78,9 @@ CREATE TABLE umowa(
     ID                  serial                  ,
     data_zawarcia       date            NOT NULL,
     data_zakonczenia    date            NOT NULL,
-    oferta_nr           char(4)                 ,
-    klient_pesel        char(11)                ,
-    pracownik_pesel     char(11)                ,
+    oferta_nr           char(4)         NOT NULL,
+    klient_pesel        char(11)        NOT NULL,
+    pracownik_pesel     char(11)        NOT NULL,
     egzemplarz_IMEI     numeric(15)             ,
     CONSTRAINT          umowa_ID_pk     PRIMARY KEY(ID),
     CONSTRAINT          oferta_fk       FOREIGN KEY(oferta_nr)

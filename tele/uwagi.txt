@@ -3,7 +3,7 @@ dwa zwiazki miedzy umowa-klient-pracownik   --- done
 zła kolejność                               --- done
 brak umowa-pracownik                        --- done
 brak egzemplarzy                            --- done
-
+dokonczyc create.sql ---> umowa             
 
 
 DIA:
