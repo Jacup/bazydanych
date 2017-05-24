@@ -133,33 +133,33 @@ INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
 
 -------------------PRACOWNIK----------------------------------------------------
 
-INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
-    VAlUES
-    ('11111111111', 'Andrzej', 'Piwerko', '83-000', 'Gdynia', 'Rynek 1', '100', '5555');
-INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
-    VAlUES
-    ('12222222222', 'Marian', 'Wódeczka', '23-990', 'Warszawa', 'Rynek 12A', '100', '5557');
-INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
-    VAlUES
-    ('13333333333', 'Grzegorz', 'Bimberek', '00-124', 'Śląsk', 'Krótka 22', '100', '5556');
+-- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+--     VAlUES
+--     ('11111111111', 'Andrzej', 'Piwerko', '83-000', 'Gdynia', 'Rynek 1', '100', '5555');
+-- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+--     VAlUES
+--     ('12222222222', 'Marian', 'Wódeczka', '23-990', 'Warszawa', 'Rynek 12A', '100', '5557');
+-- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+--     VAlUES
+--     ('13333333333', 'Grzegorz', 'Bimberek', '00-124', 'Śląsk', 'Krótka 22', '100', '5556');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('14444444444', 'Natalia', 'Ogórek', '83-201', NULL, 'Rokocin 1', '102', '5555');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('15555555555', 'Zenek', 'Martyniuk', '23-990', 'Warszawa', 'Marszałkowska 13', '101', '5557');
-INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
-    VAlUES
-    ('16666666666', 'Aleksandra', 'Szczupak', '83-000', 'Gdańsk', 'Kościuszki 13', '100', '5555');
+-- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+--     VAlUES
+--     ('16666666666', 'Aleksandra', 'Szczupak', '83-000', 'Gdańsk', 'Kościuszki 13', '100', '5555');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('17777777777', 'Monika', 'Brodka', '00-120', 'Dąbrowa Górnicza', 'Morska 3', '101', '5556');
-INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
-    VAlUES
-    ('18888888888', 'Paweł', 'Zduński', '23-991', 'Warszawa', 'Gajowa 22A/35', '104', '5557');
-INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
-    VAlUES
-    ('11333333333', 'Kamil', 'Bednarek', '23-991', 'Warszawa', 'Powstańców 32/1', '103', '5557');
+-- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+--     VAlUES
+--     ('18888888888', 'Paweł', 'Zduński', '23-991', 'Warszawa', 'Gajowa 22A/35', '104', '5557');
+-- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+--     VAlUES
+--     ('11333333333', 'Kamil', 'Bednarek', '23-991', 'Warszawa', 'Powstańców 32/1', '103', '5557');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('11444444444', 'Zbigniew', 'Malanowski', '23-991', 'Warszawa', 'Wolna 1/12', '102', '5557');
@@ -175,27 +175,27 @@ INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, st
 
 -------------------UMOWA----------------------------------------------------
 
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('19-12-2013', '19-12-2015', '04444444444', '02');
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('09-01-2016', '09-01-2018', '02222222222', '03');
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('26-03-2015', '26-03-2016', '05555555555', '06');
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('05-05-2017', '05-05-2019', '07777777777', '05');
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('04-05-2015', '04-05-2017', '01111111111', '01');
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('22-06-2015', '22-06-2018', '03333333333', '03');
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('01-03-2016', '01-03-2018', '06666666666', '02');
-    INSERT INTO umowa(data_zawarcia, data_zakonczenia, klient_pesel, oferta_nr)
-        VALUES
-        ('15-12-2016', '15-12-2018', '02222222222', '05');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('19-12-2013', '19-12-2015', '01', '01111111111', '14444444444', '999999999999993');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('22-05-2014', '22-05-2017', '02', '02222222222', '14444444444', '999999999999994');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('01-05-2017', '01-05-2019', '04', '05555555555', '17777777777', '999999999999995');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('15-03-2017', '15-03-2020', '01', '06666666666', '11222222222', '999999999999996');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('30-06-2016', '30-06-2018', '05', '00000000000', '11555555555', '999999999999997');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('24-11-2014', '24-11-2017', '05', '03333333333', '11222222222', '999999999999999');
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('15-12-2013', '15-12-2015', '02', '04444444444', '17777777777', NULL);
+INSERT INTO umowa(data_zawarcia, data_zakonczenia, oferta_nr, klient_pesel, pracownik_pesel, egzemplarz_IMEI)
+    VALUES
+    ('01-01-2016', '01-01-2017', '04', '01111111111', '15555555555', '999999999999998');
