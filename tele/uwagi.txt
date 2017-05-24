@@ -1,16 +1,7 @@
-zamienic tele z egzemplarzem,               --- done
-dwa zwiazki miedzy umowa-klient-pracownik   --- done
-zła kolejność                               --- done
-brak umowa-pracownik                        --- done
-brak egzemplarzy                            --- done
-dokonczyc create.sql ---> umowa             --- done
+# Sieć Telefoniczna
 
 
-DIA:
-Telefon - dodac kod                         --- done
-
-
-TODO:
+## TODO:
 - [ ]  sieć_telefoniczna.pdf (dokumentacja)
     1. opis słowny projektu, jakie są najważniejsze encje i ich atrybuty, jaki charakter mają związki je łączące, jakie pytania mamy zamiar zadawać, ew. jakie przewidujemy wyzwalacze,
     2. diagram związków i encji,
@@ -23,3 +14,17 @@ TODO:
 - [ ] select_db.sql
 - [ ] trigger.sql
 - [ ] trigger-ex.sql
+
+
+
+
+zamienic tele z egzemplarzem,               --- done
+dwa zwiazki miedzy umowa-klient-pracownik   --- done
+zła kolejność                               --- done
+brak umowa-pracownik                        --- done
+brak egzemplarzy                            --- done
+dokonczyc create.sql ---> umowa             --- done
+
+
+DIA:
+Telefon - dodac kod                         --- done
