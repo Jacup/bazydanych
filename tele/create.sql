@@ -20,7 +20,6 @@ CREATE TABLE telefon(
     RAM_GB              char(3)                 ,
     pamiec_GB           char(3)                 ,
     CONSTRAINT          telefon_pk      PRIMARY KEY(kod)
-
 );
 
 CREATE TABLE egzemplarz(
@@ -33,7 +32,7 @@ CREATE TABLE egzemplarz(
 
 CREATE TABLE oferta(
     nr                  char(2)         NOT NULL,
-    cena                varchar(16)     NOT NULL,
+    cena_zł             numeric(3)      NOT NULL,
     typ                 varchar(16)     NOT NULL,
     internet_MB         varchar(16)             ,
     minuty_min          varchar(16)             ,
@@ -44,7 +43,7 @@ CREATE TABLE oferta(
 CREATE TABLE stanowisko(
     ID                  char(3)         NOT NULL,
     nazwa               varchar(32)     NOT NULL,
-    pensja              char(32)                ,
+    pensja_zł           numeric                 ,
     CONSTRAINT          stanowisko_ID_pk    PRIMARY KEY(ID)
 );
 

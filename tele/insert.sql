@@ -83,42 +83,42 @@ INSERT INTO egzemplarz(IMEI, telefon_kod)
 
 -------------------OFERTA----------------------------------------------------
 
-INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+INSERT INTO oferta(nr, cena_zł, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('01', '29 zł', 'mix', NULL, '1000', '500');
-INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+    ('01', '29', 'mix', NULL, '1000', '500');
+INSERT INTO oferta(nr, cena_zł, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('02', '49 zł', 'abonament', '2048', 'NO-LIMIT', '2500');
-INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+    ('02', '49', 'abonament', '2048', 'NO-LIMIT', '2500');
+INSERT INTO oferta(nr, cena_zł, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('03', '15 zł', 'mix', '150', '200', '500');
-INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+    ('03', '15', 'mix', '150', '200', '500');
+INSERT INTO oferta(nr, cena_zł, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('04', '15 zł', 'abonament', '512', null, '200');
-INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+    ('04', '15', 'abonament', '512', null, '200');
+INSERT INTO oferta(nr, cena_zł, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('05', '129 zł', 'abonament', 'NO-LIMIT', 'NO-LIMIT', 'NO-LIMIT');
-INSERT INTO oferta(nr, cena, typ, internet_MB, minuty_min, pakiet_sms)
+    ('05', '129', 'abonament', 'NO-LIMIT', 'NO-LIMIT', 'NO-LIMIT');
+INSERT INTO oferta(nr, cena_zł, typ, internet_MB, minuty_min, pakiet_sms)
     VALUES
-    ('06', '69 zł', 'abonament', 'NO-LIMIT', '250', '500');
+    ('06', '69', 'abonament', 'NO-LIMIT', '250', '500');
 
     -------------------STANOWISKO----------------------------------------------------
 
-INSERT INTO stanowisko(ID, nazwa, pensja)
+INSERT INTO stanowisko(ID, nazwa, pensja_zł)
     VALUES
-    ('100', 'kierownik', '4890zł');
-INSERT INTO stanowisko(ID, nazwa, pensja)
+    ('100', 'kierownik', '4890');
+INSERT INTO stanowisko(ID, nazwa, pensja_zł)
     VALUES
-    ('101', 'manager', '3000zł');
-INSERT INTO stanowisko(ID, nazwa, pensja)
+    ('101', 'manager', '3000');
+INSERT INTO stanowisko(ID, nazwa, pensja_zł)
     VALUES
-    ('102', 'sprzedawca', '1400zł');
-INSERT INTO stanowisko(ID, nazwa, pensja)
+    ('102', 'sprzedawca', '1400');
+INSERT INTO stanowisko(ID, nazwa, pensja_zł)
     VALUES
-    ('103', 'Informatyk', '5020zł');
-INSERT INTO stanowisko(ID, nazwa, pensja)
+    ('103', 'Informatyk', '5020');
+INSERT INTO stanowisko(ID, nazwa, pensja_zł)
     VALUES
-    ('104', 'Dyrektor', '8400zł');
+    ('104', 'Dyrektor', '8400');
 -------------------ODDZIAL----------------------------------------------------
 
 INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
@@ -133,33 +133,33 @@ INSERT INTO oddzial(numer, nazwa, telefon, kod_pocztowy, miasto, ulica_dom)
 
 -------------------PRACOWNIK----------------------------------------------------
 
--- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
---     VAlUES
---     ('11111111111', 'Andrzej', 'Piwerko', '83-000', 'Gdynia', 'Rynek 1', '100', '5555');
--- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
---     VAlUES
---     ('12222222222', 'Marian', 'Wódeczka', '23-990', 'Warszawa', 'Rynek 12A', '100', '5557');
--- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
---     VAlUES
---     ('13333333333', 'Grzegorz', 'Bimberek', '00-124', 'Śląsk', 'Krótka 22', '100', '5556');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('11111111111', 'Andrzej', 'Piwerko', '83-000', 'Gdynia', 'Rynek 1', '100', '5555');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('12222222222', 'Marian', 'Wódeczka', '23-990', 'Warszawa', 'Rynek 12A', '100', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('13333333333', 'Grzegorz', 'Bimberek', '00-124', 'Śląsk', 'Krótka 22', '100', '5556');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('14444444444', 'Natalia', 'Ogórek', '83-201', NULL, 'Rokocin 1', '102', '5555');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('15555555555', 'Zenek', 'Martyniuk', '23-990', 'Warszawa', 'Marszałkowska 13', '101', '5557');
--- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
---     VAlUES
---     ('16666666666', 'Aleksandra', 'Szczupak', '83-000', 'Gdańsk', 'Kościuszki 13', '100', '5555');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('16666666666', 'Aleksandra', 'Szczupak', '83-000', 'Gdańsk', 'Kościuszki 13', '102', '5555');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('17777777777', 'Monika', 'Brodka', '00-120', 'Dąbrowa Górnicza', 'Morska 3', '101', '5556');
--- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
---     VAlUES
---     ('18888888888', 'Paweł', 'Zduński', '23-991', 'Warszawa', 'Gajowa 22A/35', '104', '5557');
--- INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
---     VAlUES
---     ('11333333333', 'Kamil', 'Bednarek', '23-991', 'Warszawa', 'Powstańców 32/1', '103', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('18888888888', 'Paweł', 'Zduński', '23-991', 'Warszawa', 'Gajowa 22A/35', '104', '5557');
+INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
+    VAlUES
+    ('11333333333', 'Kamil', 'Bednarek', '23-991', 'Warszawa', 'Powstańców 32/1', '103', '5557');
 INSERT INTO pracownik(PESEL, imie, nazwisko, kod_pocztowy, miasto, ulica_dom, stanowisko_ID, oddzial_numer)
     VAlUES
     ('11444444444', 'Zbigniew', 'Malanowski', '23-991', 'Warszawa', 'Wolna 1/12', '102', '5557');
