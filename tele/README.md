@@ -11,6 +11,6 @@
 - [x] create_db.sql
 - [x] drop_db.sql
 - [x] insert_db.sql
-- [ ] select_db.sql
+- [x] select_db.sql
 - [ ] trigger.sql
 - [ ] trigger-ex.sql
