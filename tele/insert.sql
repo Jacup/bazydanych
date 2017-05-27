@@ -1,6 +1,7 @@
 SET DATESTYLE TO 'European,German';
 SET client_encoding='utf-8';
 
+
 -------------------KLIENT----------------------------------------------------
 
 insert into klient(pesel, imie, nazwisko, kod_pocztowy, miasto, ulica_dom)

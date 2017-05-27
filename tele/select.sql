@@ -120,7 +120,6 @@ SELECT imie, nazwisko, pesel
         WHERE k.pesel = U.klient_pesel
     )
 ;
-
 --          14. CREATE VIEW + zliczanie umów na pracownika
 CREATE VIEW pracownik_umowy AS (
 SELECT imie, nazwisko, pracownik_pesel, count(pracownik_pesel) AS ilość_umów

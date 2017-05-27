@@ -1,6 +1,7 @@
 SET client_encoding='utf-8';
 SET DATESTYLE TO 'European,German';
 
+
 CREATE TABLE klient(
     pesel               char(11)        NOT NULL,
     imie                varchar(32)     NOT NULL,

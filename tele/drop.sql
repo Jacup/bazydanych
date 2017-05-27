@@ -5,4 +5,5 @@ DROP TABLE stanowisko;
 DROP TABLE oferta;
 DROP TABLE egzemplarz;
 DROP TABLE telefon;
-DROP TABLE klient;
+DROP TABLE klient
+;
